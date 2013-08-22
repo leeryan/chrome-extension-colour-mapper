@@ -4,5 +4,6 @@
 	"version": "0.0.1",
 	"description": "Chrome devtools extension to detect the amount of times a colour is applied to an element via a CSS rule.",
 	"devtools_page": "html/devtools.html",	
-	"minimum_chrome_version": "20.0.1132.57"
+	"minimum_chrome_version": "20.0.1132.57",
+	"background":{"scripts":["scripts/background.js"]}
 }
