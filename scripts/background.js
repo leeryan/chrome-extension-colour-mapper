@@ -1,19 +1,26 @@
-			var ports = {};
-chrome.extension.onConnect.addListener(function(port) {
-    if (port.name !== "devtools") return;
-    ports[port.portId_] = port;
-    // Remove port when destroyed (eg when devtools instance is closed)
-    port.onDisconnect.addListener(function(port) {
-        delete ports[port.portId_];
-    });
-    port.onMessage.addListener(function(msg) {
-        // Whatever you wish
-        console.log(msg);
-    });
+//Handle the request from devtools
+chrome.runtime.onConnect.addListener(function(port){
+	port.onMessage.addListener(function(message){
+		//Post back to devtools.
+		//port.postMessage(message);
+		
+		//Request Tab for sending information
+		chrome.tabs.query({
+			"status": "complete",
+			"currentWindow": true,
+			"active": true
+		}, function(tabs){
+			alert('background is sending a message to content script')
+			chrome.tabs.sendMessage(tabs[0].id, message, function(response) {
+				alert(response);
+			});
+		});
+	});
+	
+	//Post back to devtools
+	/*
+chrome.runtime.onMessage.addListener(function(message, sender){
+		port.postMessage(message);
+	});
+*/
 });
-// Function to send a message to all devtool.html views:
-function notifyDevtools(msg) {
-    Object.keys(ports).forEach(function(portId_) {
-        ports[portId_].postMessage(msg);
-    });
-}
