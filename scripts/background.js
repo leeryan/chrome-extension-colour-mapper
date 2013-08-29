@@ -11,16 +11,14 @@ chrome.runtime.onConnect.addListener(function(port){
 			"active": true
 		}, function(tabs){
 			alert('background is sending a message to content script')
-			chrome.tabs.sendMessage(tabs[0].id, message, function(response) {
+			chrome.tabs.sendMessage(tabs[0].id, {message: message}, function(response) {
 				alert(response);
 			});
 		});
 	});
 	
 	//Post back to devtools
-	/*
-chrome.runtime.onMessage.addListener(function(message, sender){
+	chrome.runtime.onMessage.addListener(function(message, sender){
 		port.postMessage(message);
 	});
-*/
 });

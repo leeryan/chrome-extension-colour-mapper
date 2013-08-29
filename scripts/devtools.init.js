@@ -6,15 +6,18 @@
 
 
 var port = chrome.runtime.connect({name: 'devtools'});
+var stuffToPutInPanel; 
 //Post message to the background page
 port.postMessage("request some data");
 
 //Handle response when received
 port.onMessage.addListener(function(msg){
-	console.log("data recieved is" + msg);
+	
+	stuffToPutInPanel = msg;
+
+	alert("data recieved is" + msg);
 });
 
-/*
 chrome.devtools.panels.create('Colourmapper', '../img/panel_icon.png', '../html/panel.html', function(extensionPanel){
 	
 	
@@ -23,24 +26,12 @@ chrome.devtools.panels.create('Colourmapper', '../img/panel_icon.png', '../html/
 		
 		panelWindow.document.body.appendChild(document.createTextNode('hello world'));
 		
-		//Send a message to the background. 
-		chrome.runtime.sendMessage({msg: 'getData'}, function(response){
-			
-			panelWindow.document.body.appendChild(document.createTextNode(response.msg));
-			
-			
-		});
+		panelWindow.document.body.appendChild(document.createTextNode(stuffToPutInPanel));
 		
-		chrome.runtime.sendMessage({msg: 'getParagraphs'}, function(response){
-			
-			panelWindow.document.body.appendChild(document.createTextNode(response.msg));
-			
-		});
 			
 	});
 
 });
-*/
 			
 		
 		
