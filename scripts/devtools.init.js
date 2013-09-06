@@ -6,16 +6,22 @@
 
 
 var port = chrome.runtime.connect({name: 'devtools'});
-var stuffToPutInPanel; 
+var styleData; 
 //Post message to the background page
-port.postMessage("request some data");
+//port.postMessage("request some data");
+
+port.postMessage({
+	"rule01": "font-size",
+	"rule02": "color",
+	"rule03": "position"
+});
 
 //Handle response when received
-port.onMessage.addListener(function(msg){
+port.onMessage.addListener(function(message){
 	
-	stuffToPutInPanel = msg;
+	styleData = message;
 
-	alert("data recieved is" + msg);
+/* 	alert("data recieved is" + msg); */
 });
 
 chrome.devtools.panels.create('Colourmapper', '../img/panel_icon.png', '../html/panel.html', function(extensionPanel){
@@ -23,12 +29,13 @@ chrome.devtools.panels.create('Colourmapper', '../img/panel_icon.png', '../html/
 	
 	extensionPanel.onShown.addListener(function(panelWindow){
 		
+		$(panelWindow.document.body).append('<div id="color-mapper" />');
 		
-		panelWindow.document.body.appendChild(document.createTextNode('hello world'));
+		var $app = $('#color-mapper');
 		
-		panelWindow.document.body.appendChild(document.createTextNode(stuffToPutInPanel));
+		$app.append('<p> oi oi oi oi oi </p>')
 		
-			
+				
 	});
 
 });

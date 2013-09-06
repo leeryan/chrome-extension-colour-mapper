@@ -1,32 +1,31 @@
-var DOM = window.DOM || {}
+var DOM = window.DOM || {};
 
 //setup listener to respon to background page upon request
 //TODO put this somewhere moere sensible
 chrome.runtime.onMessage.addListener(function(message, sender){
-	alert('content script got a message');
-	alert("in content script message recieved is " + JSON.stringify(message));
+/* 	alert('content script got a message'); */
+/* 	alert("in content script message recieved is " + JSON.stringify(message)); */
+	
 	//Send stuff to the background page
-	chrome.runtime.sendMessage("My url is" + window.location.origin);
+	var styleConfig = DOM.scrapedom.init(message.options);
+	
+	chrome.runtime.sendMessage(styleConfig);
 });
 
 DOM.scrapedom = (function(config){
-
-	//Pass config object in from devtools.js
-	var config = {
-		"rule01": "color",
-		"rule02": "font-size"
-	};
 	
 	var styleData = {};
 	
 	//Create an object that has all of the values in the config object. 
-	var createStyleModel = function(){
-		for(rule in config){
+	var createStyleModel = function(config){
+		
+		for(var rule in config){
 			var styleRule = config[rule];
 			styleData[styleRule] = {};
 		}
 		
 		iterateOverDom();
+
 	}
 	
 	//Iterate over the dome grabbing the syles from every element in the page. 
@@ -59,38 +58,20 @@ DOM.scrapedom = (function(config){
 					_.extend(styleData[key], valueCounter);
 					
 				} else{
-					
-					console.log(valueCounter[value]);
-					
-				}	
+					styleData[key][value] = styleData[key][value] + 1;
+				}
 			}
 		};
-		
-		console.log(styleData);	
-	};
-	
-	
-	//Update style model with matches from iterate over dom
-	var updateStyleModel = function(propertyRule){
-	
-		//Find rule in object
-		for(var index in styleData){
-			if(index === property){
-				
-			}
-		}
-		
+			
 	};
 	
 	return{
-		init: function(){
-			//iterateOverDom();
-			createStyleModel();	
+		init: function(config){
+			
+			createStyleModel(config);
+			return styleData;
+			
 		}
 	}
 	
 })();
-
-$('document').ready(function(){
-	DOM.scrapedom.init();
-});
