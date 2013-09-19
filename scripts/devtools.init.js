@@ -21,24 +21,46 @@ port.onMessage.addListener(function(message){
 	
 	styleData = message;
 
-/* 	alert("data recieved is" + msg); */
+	alert("data recieved is" + styleData);
+	
+	DEVTOOLS.createPanel();
+	
 });
 
-chrome.devtools.panels.create('Colourmapper', '../img/panel_icon.png', '../html/panel.html', function(extensionPanel){
+var DEVTOOLS = window.DEVTOOLS || {};
+
+DEVTOOLS.createPanel = function(){
 	
-	
-	extensionPanel.onShown.addListener(function(panelWindow){
+	chrome.devtools.panels.create('Colourmapper', '../img/panel_icon.png', '../html/panel.html', function(extensionPanel){
 		
-		$(panelWindow.document.body).append('<div id="color-mapper" />');
 		
-		var $app = $('#color-mapper');
+		extensionPanel.onShown.addListener(function(panelWindow){
+			
+			$(panelWindow.document.body).append('<div id="color-mapper" />');
 		
-		$app.append('<p> oi oi oi oi oi </p>')
-		
+			var $app = $(panelWindow.document.body).find('#color-mapper'),
+				properties = [];
+			
+				$app.append(styleData);
 				
-	});
+				//properties = _.key(styleData);
+				
+				//$app.append(properties);
+				
+			
+			for (var i = 0; i < properties.length; i++){
+				
+				$app.append('<p>hello</p>');
+				
+			}
+					
+		});
+	
+	});	
+	
+}
 
-});
+
 			
 		
 		

@@ -1,3 +1,4 @@
+/*
 function do_something(msg) {
     document.body.textContent += '\n' + msg; // Stupid example, PoC
 }
@@ -6,3 +7,4 @@ document.documentElement.onclick = function() {
     // the panel can only be clicked when it's visible...
     respond('Another stupid example!');
 };
+*/

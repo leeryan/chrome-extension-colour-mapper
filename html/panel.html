@@ -4,23 +4,30 @@
 		<meta encoding="utf-8" />
 		<link rel="stylesheet" href="../stylesheets/css/global.css" />
 		<script src="../scripts/libs/jquery-2.0.3.min.js"></script>
+		<script src="../scripts/libs/handlebars.js"></script>
 		<script src="../scripts/panel.js"></script>
 	</head>
 	<body>
-		<h1>CSS Mapper</h1>
-		<table>
-			<thead>
-				<tr>
-					<th>Colour</th>
-					<th>Count</th>
-				</tr>
-			</thead>
-			<tbody>
-				<tr>
-					<td></td>
-					<td></td>
-				</tr>
-			</tbody>
-		</table>
+		<div id="colour-mapper">
+			<header>
+				<h1>Colour Mapper</h1>
+			</header>
+		</div>
+		<script id="stlye-matrix" type="text/x-handlebars-template">
+			<table>
+				<thead>
+					<tr>
+						<!-- Some logic here to determine the amount of headers required -->
+						<td></td>
+					</tr>
+				</thead>
+				<tbody>
+					<!-- Some logic here to determine the amount of rows required -->
+					<tr>
+						
+					</tr>
+				</tbody>
+			</table>
+		</script>
 	</body>
 </html>
