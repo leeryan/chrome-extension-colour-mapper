@@ -3,7 +3,7 @@ var DOM = window.DOM || {};
 //setup listener to respon to background page upon request
 //TODO put this somewhere moere sensible
 chrome.runtime.onMessage.addListener(function(message, sender){
-	alert("in content script message recieved is " + JSON.stringify(message));
+	//alert("in content script message recieved is " + JSON.stringify(message));
 	
 	//Send stuff to the background page
 	var styleConfig = DOM.scrapedom.init(message.options);

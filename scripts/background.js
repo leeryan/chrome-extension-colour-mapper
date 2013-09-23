@@ -10,7 +10,7 @@ chrome.runtime.onConnect.addListener(function(port){
 			"currentWindow": true,
 			"active": true
 		}, function(tabs){
-			alert('background is sending a message to content script');
+			//alert('background is sending a message to content script');
 			chrome.tabs.sendMessage(tabs[0].id, {options: message}, function(response) {
 /* 				alert(response); */
 			});

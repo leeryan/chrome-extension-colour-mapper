@@ -1,1 +1,27 @@
-/* Variables */
+/* Primary variables */
+
+$helvetica-stack: "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+$white: #ffffff;
+$dark-grey: #333333;
+$light-grey: #ddd;
+$highlight-grey: #f7f7f9;
+$blue: #428bca;
+
+/* Contextual variables*/
+
+$primary-font-stack: $helvetica-stack;
+$body-copy: $dark-grey;
+$line-breaks: $light-grey;
+$table-highlight: $highlight-grey;
+$btn-primary: $blue;
+$btn-copy: $white;
+$toggle-switch: $dark-grey;
+
+/* Mixins */
+@mixin box-spacing{
+	overflow: hidden;
+	margin: 0 0 20px 0;
+	padding: 0 0 10px 0;
+	border-bottom: 1px solid $light-grey;
+}

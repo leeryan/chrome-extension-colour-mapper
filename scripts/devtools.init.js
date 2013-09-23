@@ -7,9 +7,29 @@
 
 var port = chrome.runtime.connect({name: 'devtools'});
 var styleData; 
+var styleDataStub = 
+	{
+	 "font-size":
+		{"14px":124,
+		 "56px":13,
+		 "28px":7,
+		 "32px":2,
+		 "25px":6,
+		 "53px":0,
+		 "50px":0},
+	"color":
+		{"rgb(51, 51, 51)":47,
+		 "rgb(255, 255, 255)":70,
+		 "rgb(59, 59, 59)":0,
+		 "rgb(90, 90, 90)":38},
+	"position":
+		{"static":134,
+		 "relative":11,
+		 "fixed":6,
+		 "absolute":4}
+	}
+	
 //Post message to the background page
-//port.postMessage("request some data");
-
 port.postMessage({
 	"rule01": "font-size",
 	"rule02": "color",
@@ -19,9 +39,9 @@ port.postMessage({
 //Handle response when received
 port.onMessage.addListener(function(message){
 	
-	styleData = message;
+	styleDataStub = message;
 
-	alert("data recieved is" + styleData);
+	//alert("data recieved is" + JSON.stringify(styleData));
 	
 	DEVTOOLS.createPanel();
 	
@@ -36,21 +56,20 @@ DEVTOOLS.createPanel = function(){
 		
 		extensionPanel.onShown.addListener(function(panelWindow){
 			
-			$(panelWindow.document.body).append('<div id="color-mapper" />');
+			//Make sure styleData is available globallyish.
+			
+			//$(panelWindow.document.body).append('<div id="color-mapper" />');
 		
 			var $app = $(panelWindow.document.body).find('#color-mapper'),
-				properties = [];
+				properties = _.keys(styleDataStub);
 			
-				$app.append(styleData);
-				
-				//properties = _.key(styleData);
-				
-				//$app.append(properties);
-				
-			
+
 			for (var i = 0; i < properties.length; i++){
-				
+				console.log(properties[i]);
 				$app.append('<p>hello</p>');
+				
+				//INJECT A NEW VIEW. 
+				
 				
 			}
 					

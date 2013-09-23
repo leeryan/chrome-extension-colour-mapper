@@ -1,10 +1,12 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 	<head>
 		<meta encoding="utf-8" />
 		<link rel="stylesheet" href="../stylesheets/css/global.css" />
 		<script src="../scripts/libs/jquery-2.0.3.min.js"></script>
 		<script src="../scripts/libs/handlebars.js"></script>
+		<script src="../scripts/libs/underscore.js"></script>
+		<script src="../scripts/libs/rgbHex.js"></script>
 		<script src="../scripts/panel.js"></script>
 	</head>
 	<body>
@@ -12,22 +14,52 @@
 			<header>
 				<h1>Colour Mapper</h1>
 			</header>
+			<p>The table indicates how many times a particular colour has been applied to a DOM element in the current tree via CSS.</p>
+			<div id="colour-matrix">
+				
+			</div>
+			<div id="colour-switcher">
+				<p>Change the colour reference</p>
+				<ul>
+					<li><a class="btn active" href="#">RGB</a></li>
+					<li><a class="btn" href="#">HEX</a></li>
+				</ul>
+			</div>
+			<div id="persistance">
+				<p>Persist count across journey</p>
+				<form>
+					<div class="toggle">
+						<input type="checkbox" id="persistance-toggle" name="persistance-toggle" value="off" />	
+						<label for="persistance-toggle">
+							<span>on</span>
+							<span class="switch off">/</span>
+							<span>off</span>
+						</label>
+					</div>
+				</form>
+			</div>		
 		</div>
-		<script id="stlye-matrix" type="text/x-handlebars-template">
-			<table>
-				<thead>
-					<tr>
-						<!-- Some logic here to determine the amount of headers required -->
-						<td></td>
-					</tr>
-				</thead>
-				<tbody>
-					<!-- Some logic here to determine the amount of rows required -->
-					<tr>
-						
-					</tr>
-				</tbody>
-			</table>
-		</script>
 	</body>
 </html>
+
+<script id="property-matrix" type="text/x-handlebars-template">
+	<h2>{{property}} staticics</h2>
+	<table class="table">
+		<thead>
+			<tr>
+				<th>{{property}}</th>
+				<th>Preview</th>
+				<th>Count</th>
+			</tr>
+		</thead>
+		<tbody>
+			{{#each this.declerations}}
+			<tr>
+				<td>{{this.rule}}</td>
+				<td class="preview"><span style="background-color:{{this.rule}}">{{this.rule}}</span></td>
+				<td>{{this.count}}</td>
+			</tr>
+			{{/each}}
+		</tbody>
+	</table>
+</script>

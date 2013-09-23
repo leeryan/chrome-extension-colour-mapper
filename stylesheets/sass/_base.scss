@@ -48,3 +48,187 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
+
+// Tables
+
+//
+// Tables
+// --------------------------------------------------
+
+
+table {
+  max-width: 100%;
+}
+th {
+  text-align: left;
+}
+
+.table{
+	width: 100%;
+	thead,
+	tbody,
+	tfoot{
+		tr{
+			th,
+			td{
+				padding: 8px;
+				line-height: 1.5;
+				vertical-align: top;
+				border-top: 1px solid $light-grey;
+				font-family: $primary-font-stack;
+				font-weight: 200;
+			}
+		}
+	}
+	
+	th{
+		text-transform: capitalize;
+	}
+	
+	tbody{
+		tr:nth-child(odd){
+			td{
+				background-color: $table-highlight;
+			}
+		}
+	}
+	
+	thead > tr > th {
+		vertical-align: bottom;
+		border-bottom: 2px solid $light-grey;
+		font-weight: 500;
+	}
+	
+	caption + thead,
+	colgroup + thead,
+	thead:first-child {
+    	tr:first-child {
+      		th, td {
+        		border-top: 0;
+			}
+		}
+	}
+	
+}
+
+// Panel styles
+
+#colour-mapper{
+	padding: 15px;
+	
+	header{
+		@include box-spacing;
+	}
+	
+}
+
+#colour-matrix{
+	@include box-spacing;
+	.preview {
+		text-indent: -9999px;
+		span{
+			border: 1px solid $light-grey;
+			display: block;
+			height: 30px;
+			width: 30px;
+		}
+		
+	}
+}
+
+#colour-switcher{
+	@include box-spacing;
+}
+
+#persistance{
+	#persistance-toggle{
+		
+	}
+	
+	.toggle{
+		border: 1px solid $light-grey;
+		display: inline;
+		padding: 6px 12px;
+		position: relative;
+		border-radius: 4px;
+		span{
+			display: inline-block;
+			width:40px;
+			text-align: center;
+		}
+		input[type=checkbox]{
+			display: none;	
+		}
+		.switch{
+			background: $toggle-switch;
+			margin-top: -1px;
+			width: 52px;
+			height: 100%;
+			border: 1px solid $light-grey;	
+			position: absolute;
+			border-radius: 4px;
+			top: 0;
+			text-indent: -9999px;
+		}
+		.on{
+			right: 0px;
+		}
+		
+		.off{
+			left: 0px;
+		}
+		
+	}
+}
+
+h1, h2{
+	color: $body-copy;
+	font-family: $primary-font-stack;
+	font-weight: 500;
+	padding: 0 0 10px 0;
+}
+
+h1{
+	font-size: 36px;
+};
+
+h2{
+	font-size: 24px;
+	text-transform: capitalize;
+}
+
+p, a, label{
+	color: $body-copy;
+	font-family: $primary-font-stack;
+	margin: 0 0 20px 0;
+	font-weight: 200;
+	line-height: 1.4;
+}
+.btn{
+	color: $btn-copy;
+	background: $btn-primary;
+	display: inline-block;
+	float: left;
+	padding: 6px 12px;
+	margin: 0 10px 10px 0;
+	font-size: 14px;
+	font-weight: normal;
+	line-height: 1.5;
+	text-align: center;
+	text-decoration: none;
+	border: 1px solid $light-grey;
+	border-radius: 4px;
+	opacity: 0.65;
+}
+
+.btn.active{
+	opacity: 1;
+}
+
+
+
+
+
+
+
+

@@ -1,5 +1,7 @@
 /* Global imports */
-/* Variables */
+/* Primary variables */
+/* Contextual variables*/
+/* Mixins */
 /* Styles for devtools panel views */
 /* Reset */
 /** Eric Meyer's Reset CSS v2.0 (http://meyerweb.com/eric/tools/css/reset/) http://cssreset.com */
@@ -17,3 +19,42 @@ blockquote, q { quotes: none; }
 blockquote:before, blockquote:after, q:before, q:after { content: ''; content: none; }
 
 table { border-collapse: collapse; border-spacing: 0; }
+
+table { max-width: 100%; }
+
+th { text-align: left; }
+
+.table { width: 100%; }
+.table thead tr th, .table thead tr td, .table tbody tr th, .table tbody tr td, .table tfoot tr th, .table tfoot tr td { padding: 8px; line-height: 1.5; vertical-align: top; border-top: 1px solid #dddddd; font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; font-weight: 200; }
+.table th { text-transform: capitalize; }
+.table tbody tr:nth-child(odd) td { background-color: #f7f7f9; }
+.table thead > tr > th { vertical-align: bottom; border-bottom: 2px solid #dddddd; font-weight: 500; }
+.table caption + thead tr:first-child th, .table caption + thead tr:first-child td, .table colgroup + thead tr:first-child th, .table colgroup + thead tr:first-child td, .table thead:first-child tr:first-child th, .table thead:first-child tr:first-child td { border-top: 0; }
+
+#colour-mapper { padding: 15px; }
+#colour-mapper header { overflow: hidden; margin: 0 0 20px 0; padding: 0 0 10px 0; border-bottom: 1px solid #dddddd; }
+
+#colour-matrix { overflow: hidden; margin: 0 0 20px 0; padding: 0 0 10px 0; border-bottom: 1px solid #dddddd; }
+#colour-matrix .preview { text-indent: -9999px; }
+#colour-matrix .preview span { border: 1px solid #dddddd; display: block; height: 30px; width: 30px; }
+
+#colour-switcher { overflow: hidden; margin: 0 0 20px 0; padding: 0 0 10px 0; border-bottom: 1px solid #dddddd; }
+
+#persistance .toggle { border: 1px solid #dddddd; display: inline; padding: 6px 12px; position: relative; border-radius: 4px; }
+#persistance .toggle span { display: inline-block; width: 40px; text-align: center; }
+#persistance .toggle input[type=checkbox] { display: none; }
+#persistance .toggle .switch { background: #333333; margin-top: -1px; width: 52px; height: 100%; border: 1px solid #dddddd; position: absolute; border-radius: 4px; top: 0; text-indent: -9999px; }
+#persistance .toggle .on { right: 0px; }
+#persistance .toggle .off { left: 0px; }
+
+h1, h2 { color: #333333; font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; font-weight: 500; padding: 0 0 10px 0; }
+
+h1 { font-size: 36px; }
+
+h2 { font-size: 24px; text-transform: capitalize; }
+
+p, a, label { color: #333333; font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; margin: 0 0 20px 0; font-weight: 200; line-height: 1.4; }
+
+.btn { color: white; background: #428bca; display: inline-block; float: left; padding: 6px 12px; margin: 0 10px 10px 0; font-size: 14px; font-weight: normal; line-height: 1.5; text-align: center; text-decoration: none; border: 1px solid #dddddd; border-radius: 4px; opacity: 0.65; }
+
+.btn.active { opacity: 1; }

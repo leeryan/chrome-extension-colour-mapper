@@ -1,16 +1,16 @@
 {
   "CodeKitInfo" : "This is a CodeKit project configuration file. It is designed to sync project settings across multiple machines. Modifying the contents of this file can be a poor life decision if you don't know what you're doing. This file is not useful unless accompanied by the project that created it in CodeKit. For more information, see: http:\/\/incident57.com\/codekit",
-  "creatorBuild" : "8317",
+  "creatorBuild" : "8326",
   "files" : {
-    "\/scripts\/libs\/jquery-2.0.3.min.js" : {
+    "\/scripts\/background.js" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/scripts\/libs\/jquery-2.0.3.min.js",
+      "inputAbbreviatedPath" : "\/scripts\/background.js",
       "outputStyle" : 1,
       "syntaxCheckerStyle" : 1,
-      "outputAbbreviatedPath" : "\/scripts\/libs\/jquery-2.0.3.min-min.js",
+      "outputAbbreviatedPath" : "\/scripts\/background-min.js",
       "fileType" : 64
     },
     "\/stylesheets\/sass\/global.scss" : {
@@ -59,6 +59,17 @@
       "outputAbbreviatedPath" : "\/scripts\/panel-min.js",
       "fileType" : 64
     },
+    "\/scripts\/libs\/rgbHex.js" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/scripts\/libs\/rgbHex.js",
+      "outputStyle" : 1,
+      "syntaxCheckerStyle" : 1,
+      "outputAbbreviatedPath" : "\/scripts\/libs\/rgbHex-min.js",
+      "fileType" : 64
+    },
     "\/html\/devtools.html" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
@@ -67,6 +78,17 @@
       "inputAbbreviatedPath" : "\/html\/devtools.html",
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 2048
+    },
+    "\/scripts\/libs\/handlebars.js" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/scripts\/libs\/handlebars.js",
+      "outputStyle" : 1,
+      "syntaxCheckerStyle" : 1,
+      "outputAbbreviatedPath" : "\/scripts\/libs\/handlebars-min.js",
+      "fileType" : 64
     },
     "\/html\/panel.html" : {
       "ignoreWasSetByUser" : 0,
@@ -88,6 +110,17 @@
       "initialSize" : 930,
       "fileType" : 8192
     },
+    "\/scripts\/panel-min.js" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 1,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/scripts\/panel-min.js",
+      "outputStyle" : 1,
+      "syntaxCheckerStyle" : 1,
+      "outputAbbreviatedPath" : "\/scripts\/panel-min-min.js",
+      "fileType" : 64
+    },
     "\/scripts\/content-min.js" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 1,
@@ -99,24 +132,46 @@
       "outputAbbreviatedPath" : "\/scripts\/content-min-min.js",
       "fileType" : 64
     },
+    "\/scripts\/libs\/underscore.js" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/scripts\/libs\/underscore.js",
+      "outputStyle" : 1,
+      "syntaxCheckerStyle" : 1,
+      "outputAbbreviatedPath" : "\/scripts\/libs\/underscore-min.js",
+      "fileType" : 64
+    },
     "\/stylesheets\/css\/global.css" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 1,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
       "inputAbbreviatedPath" : "\/stylesheets\/css\/global.css",
-      "outputAbbreviatedPath" : "No Output Path",
+      "outputAbbreviatedPath" : "\/No Output Path",
       "fileType" : 16
     },
-    "\/scripts\/background.js" : {
+    "\/scripts\/content.js" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/scripts\/background.js",
+      "inputAbbreviatedPath" : "\/scripts\/content.js",
       "outputStyle" : 1,
       "syntaxCheckerStyle" : 1,
-      "outputAbbreviatedPath" : "\/scripts\/background-min.js",
+      "outputAbbreviatedPath" : "\/scripts\/content-min.js",
+      "fileType" : 64
+    },
+    "\/scripts\/libs\/jquery-2.0.3.min.js" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/scripts\/libs\/jquery-2.0.3.min.js",
+      "outputStyle" : 1,
+      "syntaxCheckerStyle" : 1,
+      "outputAbbreviatedPath" : "\/scripts\/libs\/jquery-2.0.3.min-min.js",
       "fileType" : 64
     },
     "\/stylesheets\/sass\/_helpers.scss" : {
@@ -130,17 +185,6 @@
       "outputAbbreviatedPath" : "\/stylesheets\/css\/_helpers.css",
       "fileType" : 4,
       "debugStyle" : 0
-    },
-    "\/scripts\/content.js" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/scripts\/content.js",
-      "outputStyle" : 1,
-      "syntaxCheckerStyle" : 1,
-      "outputAbbreviatedPath" : "\/scripts\/content-min.js",
-      "fileType" : 64
     }
   },
   "manualImportLinks" : [
