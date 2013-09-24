@@ -1,25 +1,40 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app>
 	<head>
 		<meta encoding="utf-8" />
 		<link rel="stylesheet" href="../stylesheets/css/global.css" />
 		<script src="../bower_components/jquery/jquery.js"></script>
 		<script src="../bower_components/angular/angular.js"></script>
-		<script src="../bower_components/handlebars/handlebars.js"></script>
 		<script src="../bower_components/underscore/underscore.js"></script>
 		<script src="../scripts/libs/rgbHex.js"></script>
 		<script src="../scripts/panel.js"></script>
 	</head>
 	<body>
-		<div id="colour-mapper">
+		<div id="colour-mapper" ng-controller="ColourMapper">
 			<header>
 				<h1>Colour Mapper</h1>
 			</header>
 			<p>The table indicates how many times a particular colour has been applied to a DOM element in the current tree via CSS.</p>
 			<div id="colour-matrix">
-				
+				<h2>{{colourObj.property}} statistics</h2>
+				<table class="table">
+					<thead>
+						<tr>
+							<th>{{colourObj.property}}</th>
+							<th>Preview</th>
+							<th>Count</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr ng-repeat="decleration in declerations">
+							<td>{{decleration.rule}}</td>
+							<td class="preview"><span style="background-color:{{decleration.rule}}">{{decleration.rule}}</span></td>
+							<td>{{decleration.count}}</td>
+						</tr>
+					</tbody>
+				</table>
 			</div>
-			<div id="control-panel">
+			<div id="control-panel" >
 				<header>
 					<h2>Control Panel</h2>
 					<span>close</span>
@@ -29,8 +44,9 @@
 					<fieldset id="colour-switcher">
 						<p>Change the colour reference</p>
 						<ul>
-							<li><a class="btn active" href="#">RGB</a></li>
-							<li><a class="btn" href="#">HEX</a></li>
+							<li ng-repeat="colourType in colourTypes">
+								<a class="btn" ng-class="{active: colourType == selected}" href="#" ng-click="changeColourValue(colourType)">{{colourType}}</a>
+							</li>
 						</ul>
 					</fieldset>
 					<fieldset id="property-selector">
@@ -66,29 +82,3 @@
 		</div>
 	</body>
 </html>
-
-<script id="property-matrix" type="text/x-handlebars-template">
-	<h2>{{property}} staticics</h2>
-	<table class="table">
-		<thead>
-			<tr>
-				<th>{{property}}</th>
-				<th>Preview</th>
-				<th>Count</th>
-			</tr>
-		</thead>
-		<tbody>
-			{{#each this.declerations}}
-			<tr>
-				<td>{{this.rule}}</td>
-				<td class="preview"><span style="background-color:{{this.rule}}">{{this.rule}}</span></td>
-				<td>{{this.count}}</td>
-			</tr>
-			{{/each}}
-		</tbody>
-	</table>
-</script>
-
-<script id="control-panel" type="text/x-handlebars-template">
-	<fieldset></fieldset>
-</script>

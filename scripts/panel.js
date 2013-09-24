@@ -1,6 +1,5 @@
 /* global Handlebars */
-
-var CM = window.CM || {};
+var myApp = angular.module('myApp', []);
 
 var colourObj = {
 	property : 'colour',
@@ -12,56 +11,23 @@ var colourObj = {
 		{rule: 'rgb(66, 139, 202)', count: 26}
 	]
 };
-	
-CM.createTables = (function(){
-	
-	var renderTable = function(){
-		
-		var source = $('#property-matrix').html(),
-			template = Handlebars.compile(source);
-			
-			$('#colour-matrix').append(template(colourObj));
-		
-	};
-	
-	return {
-		init: function(){
-			renderTable();
-		}
-	};
-	
-})();
 
-CM.colourValueSwitcher = (function(){
-
-	var bindSwitchEvents = function(){
-		
-		var trigger = '#colour-switcher a',
-			matrix = '#property-matrix';
-		
-		$(trigger).on('click', function(){
-			if($(this).hasClass('active')){
-				return false;
-			} else {
-				$(trigger).removeClass('active');
-				$(this).addClass('active');
-				_.map(colourObj.declerations, function(decleration){
-					decleration.rule = $.rgbHex(decleration.rule);
-				});
-				$(matrix).children().remove();
-				CM.createTables.init();
-				
-			}
-		})
-		
-	};
+function ColourMapper($scope){
 	
-	return{
-		init: function(){
-			bindSwitchEvents();
-		}
+	$scope.colourObj = colourObj;
+	$scope.declerations = colourObj.declerations;
+	$scope.colourTypes = ['RGB', 'HEX' ];
+	$scope.selected = $scope.colourTypes[0];
+	
+	$scope.changeColourValue = function(element){
+		//Add active class to selected element
+		$scope.selected = element;
+		//Update the model
+		_.map($scope.declerations, function(decleration){
+			decleration.rule = $.rgbHex(decleration.rule);
+		});
 	};
-})();
+}
 
 CM.persistanceSwitcher = (function(){
 		
@@ -83,10 +49,11 @@ CM.persistanceSwitcher = (function(){
 	};
 	
 })();
+*/
 
 $(document).ready(function(){
-	CM.createTables.init();
-	CM.colourValueSwitcher.init();
-	CM.persistanceSwitcher.init();
+	//CM.createTables.init();
+	//CM.colourValueSwitcher.init();
+	//CM.persistanceSwitcher.init();
 });
 
