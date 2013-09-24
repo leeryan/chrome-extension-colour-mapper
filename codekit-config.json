@@ -2,16 +2,25 @@
   "CodeKitInfo" : "This is a CodeKit project configuration file. It is designed to sync project settings across multiple machines. Modifying the contents of this file can be a poor life decision if you don't know what you're doing. This file is not useful unless accompanied by the project that created it in CodeKit. For more information, see: http:\/\/incident57.com\/codekit",
   "creatorBuild" : "8326",
   "files" : {
-    "\/scripts\/background.js" : {
+    "\/bower_components\/jquery\/jquery-migrate.min.js" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/scripts\/background.js",
+      "inputAbbreviatedPath" : "\/bower_components\/jquery\/jquery-migrate.min.js",
       "outputStyle" : 1,
       "syntaxCheckerStyle" : 1,
-      "outputAbbreviatedPath" : "\/scripts\/background-min.js",
+      "outputAbbreviatedPath" : "\/bower_components\/jquery\/jquery-migrate.min-min.js",
       "fileType" : 64
+    },
+    "\/bower_components\/underscore\/test\/index.html" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/bower_components\/underscore\/test\/index.html",
+      "outputAbbreviatedPath" : "No Output Path",
+      "fileType" : 2048
     },
     "\/stylesheets\/sass\/global.scss" : {
       "ignoreWasSetByUser" : 1,
@@ -25,6 +34,141 @@
       "fileType" : 4,
       "debugStyle" : 0
     },
+    "\/scripts\/libs\/rgbHex.js" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/scripts\/libs\/rgbHex.js",
+      "outputStyle" : 1,
+      "syntaxCheckerStyle" : 1,
+      "outputAbbreviatedPath" : "\/scripts\/libs\/rgbHex-min.js",
+      "fileType" : 64
+    },
+    "\/bower_components\/underscore\/index.html" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/bower_components\/underscore\/index.html",
+      "outputAbbreviatedPath" : "No Output Path",
+      "fileType" : 2048
+    },
+    "\/html\/panel.html" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/html\/panel.html",
+      "outputAbbreviatedPath" : "No Output Path",
+      "fileType" : 2048
+    },
+    "\/bower_components\/underscore\/test\/vendor\/jslitmus.js" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/bower_components\/underscore\/test\/vendor\/jslitmus.js",
+      "outputStyle" : 1,
+      "syntaxCheckerStyle" : 1,
+      "outputAbbreviatedPath" : "\/bower_components\/underscore\/test\/vendor\/jslitmus-min.js",
+      "fileType" : 64
+    },
+    "\/bower_components\/handlebars\/handlebars.js" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/bower_components\/handlebars\/handlebars.js",
+      "outputStyle" : 1,
+      "syntaxCheckerStyle" : 1,
+      "outputAbbreviatedPath" : "\/bower_components\/handlebars\/handlebars-min.js",
+      "fileType" : 64
+    },
+    "\/bower_components\/underscore\/test\/utility.js" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/bower_components\/underscore\/test\/utility.js",
+      "outputStyle" : 1,
+      "syntaxCheckerStyle" : 1,
+      "outputAbbreviatedPath" : "\/bower_components\/underscore\/test\/utility-min.js",
+      "fileType" : 64
+    },
+    "\/bower_components\/underscore\/underscore.js" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/bower_components\/underscore\/underscore.js",
+      "outputStyle" : 1,
+      "syntaxCheckerStyle" : 1,
+      "outputAbbreviatedPath" : "\/bower_components\/underscore\/underscore-min.js",
+      "fileType" : 64
+    },
+    "\/bower_components\/underscore\/test\/arrays.js" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/bower_components\/underscore\/test\/arrays.js",
+      "outputStyle" : 1,
+      "syntaxCheckerStyle" : 1,
+      "outputAbbreviatedPath" : "\/bower_components\/underscore\/test\/arrays-min.js",
+      "fileType" : 64
+    },
+    "\/bower_components\/underscore\/test\/vendor\/qunit.css" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/bower_components\/underscore\/test\/vendor\/qunit.css",
+      "outputAbbreviatedPath" : "No Output Path",
+      "fileType" : 16
+    },
+    "\/bower_components\/underscore\/test\/collections.js" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/bower_components\/underscore\/test\/collections.js",
+      "outputStyle" : 1,
+      "syntaxCheckerStyle" : 1,
+      "outputAbbreviatedPath" : "\/bower_components\/underscore\/test\/collections-min.js",
+      "fileType" : 64
+    },
+    "\/scripts\/panel-min.js" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 1,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/scripts\/panel-min.js",
+      "outputStyle" : 1,
+      "syntaxCheckerStyle" : 1,
+      "outputAbbreviatedPath" : "\/scripts\/panel-min-min.js",
+      "fileType" : 64
+    },
+    "\/bower_components\/underscore\/docs\/public\/stylesheets\/normalize.css" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/bower_components\/underscore\/docs\/public\/stylesheets\/normalize.css",
+      "outputAbbreviatedPath" : "No Output Path",
+      "fileType" : 16
+    },
+    "\/bower_components\/underscore\/docs\/images\/underscore.png" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/bower_components\/underscore\/docs\/images\/underscore.png",
+      "processed" : 0,
+      "outputAbbreviatedPath" : "\/bower_components\/underscore\/docs\/images\/underscore.png",
+      "initialSize" : 8634,
+      "fileType" : 8192
+    },
     "\/scripts\/devtools.init.js" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
@@ -34,6 +178,113 @@
       "outputStyle" : 1,
       "syntaxCheckerStyle" : 1,
       "outputAbbreviatedPath" : "\/scripts\/devtools.init-min.js",
+      "fileType" : 64
+    },
+    "\/bower_components\/underscore\/docs\/underscore.html" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/bower_components\/underscore\/docs\/underscore.html",
+      "outputAbbreviatedPath" : "No Output Path",
+      "fileType" : 2048
+    },
+    "\/bower_components\/underscore\/underscore-min.js" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 1,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/bower_components\/underscore\/underscore-min.js",
+      "outputStyle" : 1,
+      "syntaxCheckerStyle" : 1,
+      "outputAbbreviatedPath" : "\/bower_components\/underscore\/underscore-min-min.js",
+      "fileType" : 64
+    },
+    "\/bower_components\/underscore\/test\/objects.js" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/bower_components\/underscore\/test\/objects.js",
+      "outputStyle" : 1,
+      "syntaxCheckerStyle" : 1,
+      "outputAbbreviatedPath" : "\/bower_components\/underscore\/test\/objects-min.js",
+      "fileType" : 64
+    },
+    "\/scripts\/panel.js" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/scripts\/panel.js",
+      "outputStyle" : 1,
+      "syntaxCheckerStyle" : 1,
+      "outputAbbreviatedPath" : "\/scripts\/panel-min.js",
+      "fileType" : 64
+    },
+    "\/html\/devtools.html" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/html\/devtools.html",
+      "outputAbbreviatedPath" : "No Output Path",
+      "fileType" : 2048
+    },
+    "\/bower_components\/underscore\/test\/vendor\/qunit.js" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/bower_components\/underscore\/test\/vendor\/qunit.js",
+      "outputStyle" : 1,
+      "syntaxCheckerStyle" : 1,
+      "outputAbbreviatedPath" : "\/bower_components\/underscore\/test\/vendor\/qunit-min.js",
+      "fileType" : 64
+    },
+    "\/scripts\/content-min.js" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 1,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/scripts\/content-min.js",
+      "outputStyle" : 1,
+      "syntaxCheckerStyle" : 1,
+      "outputAbbreviatedPath" : "\/scripts\/content-min-min.js",
+      "fileType" : 64
+    },
+    "\/stylesheets\/sass\/_helpers.scss" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 1,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/stylesheets\/sass\/_helpers.scss",
+      "outputStyle" : 2,
+      "shouldRunBless" : 0,
+      "outputAbbreviatedPath" : "\/stylesheets\/css\/_helpers.css",
+      "fileType" : 4,
+      "debugStyle" : 0
+    },
+    "\/bower_components\/jquery\/jquery-migrate.js" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/bower_components\/jquery\/jquery-migrate.js",
+      "outputStyle" : 1,
+      "syntaxCheckerStyle" : 1,
+      "outputAbbreviatedPath" : "\/bower_components\/jquery\/jquery-migrate-min.js",
+      "fileType" : 64
+    },
+    "\/bower_components\/underscore\/test\/vendor\/runner.js" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/bower_components\/underscore\/test\/vendor\/runner.js",
+      "outputStyle" : 1,
+      "syntaxCheckerStyle" : 1,
+      "outputAbbreviatedPath" : "\/bower_components\/underscore\/test\/vendor\/runner-min.js",
       "fileType" : 64
     },
     "\/stylesheets\/sass\/_base.scss" : {
@@ -48,56 +299,78 @@
       "fileType" : 4,
       "debugStyle" : 0
     },
-    "\/scripts\/panel.js" : {
+    "\/scripts\/content.js" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/scripts\/panel.js",
+      "inputAbbreviatedPath" : "\/scripts\/content.js",
       "outputStyle" : 1,
       "syntaxCheckerStyle" : 1,
-      "outputAbbreviatedPath" : "\/scripts\/panel-min.js",
+      "outputAbbreviatedPath" : "\/scripts\/content-min.js",
       "fileType" : 64
     },
-    "\/scripts\/libs\/rgbHex.js" : {
+    "\/bower_components\/underscore\/test\/chaining.js" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/scripts\/libs\/rgbHex.js",
+      "inputAbbreviatedPath" : "\/bower_components\/underscore\/test\/chaining.js",
       "outputStyle" : 1,
       "syntaxCheckerStyle" : 1,
-      "outputAbbreviatedPath" : "\/scripts\/libs\/rgbHex-min.js",
+      "outputAbbreviatedPath" : "\/bower_components\/underscore\/test\/chaining-min.js",
       "fileType" : 64
     },
-    "\/html\/devtools.html" : {
+    "\/stylesheets\/css\/global.css" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 1,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/stylesheets\/css\/global.css",
+      "outputAbbreviatedPath" : "\/No Output Path",
+      "fileType" : 16
+    },
+    "\/scripts\/background.js" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/html\/devtools.html",
+      "inputAbbreviatedPath" : "\/scripts\/background.js",
+      "outputStyle" : 1,
+      "syntaxCheckerStyle" : 1,
+      "outputAbbreviatedPath" : "\/scripts\/background-min.js",
+      "fileType" : 64
+    },
+    "\/bower_components\/underscore\/test\/functions.js" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/bower_components\/underscore\/test\/functions.js",
+      "outputStyle" : 1,
+      "syntaxCheckerStyle" : 1,
+      "outputAbbreviatedPath" : "\/bower_components\/underscore\/test\/functions-min.js",
+      "fileType" : 64
+    },
+    "\/bower_components\/underscore\/docs\/docco.css" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/bower_components\/underscore\/docs\/docco.css",
       "outputAbbreviatedPath" : "No Output Path",
-      "fileType" : 2048
+      "fileType" : 16
     },
-    "\/scripts\/libs\/handlebars.js" : {
+    "\/bower_components\/jquery\/jquery.min.js" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/scripts\/libs\/handlebars.js",
+      "inputAbbreviatedPath" : "\/bower_components\/jquery\/jquery.min.js",
       "outputStyle" : 1,
       "syntaxCheckerStyle" : 1,
-      "outputAbbreviatedPath" : "\/scripts\/libs\/handlebars-min.js",
+      "outputAbbreviatedPath" : "\/bower_components\/jquery\/jquery.min-min.js",
       "fileType" : 64
-    },
-    "\/html\/panel.html" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/html\/panel.html",
-      "outputAbbreviatedPath" : "No Output Path",
-      "fileType" : 2048
     },
     "\/img\/panel_icon.png" : {
       "ignoreWasSetByUser" : 0,
@@ -110,81 +383,60 @@
       "initialSize" : 930,
       "fileType" : 8192
     },
-    "\/scripts\/panel-min.js" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 1,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/scripts\/panel-min.js",
-      "outputStyle" : 1,
-      "syntaxCheckerStyle" : 1,
-      "outputAbbreviatedPath" : "\/scripts\/panel-min-min.js",
-      "fileType" : 64
-    },
-    "\/scripts\/content-min.js" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 1,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/scripts\/content-min.js",
-      "outputStyle" : 1,
-      "syntaxCheckerStyle" : 1,
-      "outputAbbreviatedPath" : "\/scripts\/content-min-min.js",
-      "fileType" : 64
-    },
-    "\/scripts\/libs\/underscore.js" : {
+    "\/bower_components\/underscore\/test\/speed.js" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/scripts\/libs\/underscore.js",
+      "inputAbbreviatedPath" : "\/bower_components\/underscore\/test\/speed.js",
       "outputStyle" : 1,
       "syntaxCheckerStyle" : 1,
-      "outputAbbreviatedPath" : "\/scripts\/libs\/underscore-min.js",
+      "outputAbbreviatedPath" : "\/bower_components\/underscore\/test\/speed-min.js",
       "fileType" : 64
     },
-    "\/stylesheets\/css\/global.css" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 1,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/stylesheets\/css\/global.css",
-      "outputAbbreviatedPath" : "\/No Output Path",
-      "fileType" : 16
-    },
-    "\/scripts\/content.js" : {
+    "\/bower_components\/handlebars\/handlebars.runtime.js" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/scripts\/content.js",
+      "inputAbbreviatedPath" : "\/bower_components\/handlebars\/handlebars.runtime.js",
       "outputStyle" : 1,
       "syntaxCheckerStyle" : 1,
-      "outputAbbreviatedPath" : "\/scripts\/content-min.js",
+      "outputAbbreviatedPath" : "\/bower_components\/handlebars\/handlebars.runtime-min.js",
       "fileType" : 64
     },
-    "\/scripts\/libs\/jquery-2.0.3.min.js" : {
+    "\/bower_components\/underscore\/test\/vendor\/jquery.js" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/scripts\/libs\/jquery-2.0.3.min.js",
+      "inputAbbreviatedPath" : "\/bower_components\/underscore\/test\/vendor\/jquery.js",
       "outputStyle" : 1,
       "syntaxCheckerStyle" : 1,
-      "outputAbbreviatedPath" : "\/scripts\/libs\/jquery-2.0.3.min-min.js",
+      "outputAbbreviatedPath" : "\/bower_components\/underscore\/test\/vendor\/jquery-min.js",
       "fileType" : 64
     },
-    "\/stylesheets\/sass\/_helpers.scss" : {
+    "\/bower_components\/underscore\/docs\/images\/background.png" : {
       "ignoreWasSetByUser" : 0,
-      "ignore" : 1,
+      "ignore" : 0,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/stylesheets\/sass\/_helpers.scss",
-      "outputStyle" : 2,
-      "shouldRunBless" : 0,
-      "outputAbbreviatedPath" : "\/stylesheets\/css\/_helpers.css",
-      "fileType" : 4,
-      "debugStyle" : 0
+      "inputAbbreviatedPath" : "\/bower_components\/underscore\/docs\/images\/background.png",
+      "processed" : 0,
+      "outputAbbreviatedPath" : "\/bower_components\/underscore\/docs\/images\/background.png",
+      "initialSize" : 2108,
+      "fileType" : 8192
+    },
+    "\/bower_components\/jquery\/jquery.js" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/bower_components\/jquery\/jquery.js",
+      "outputStyle" : 1,
+      "syntaxCheckerStyle" : 1,
+      "outputAbbreviatedPath" : "\/bower_components\/jquery\/jquery-min.js",
+      "fileType" : 64
     }
   },
   "manualImportLinks" : [

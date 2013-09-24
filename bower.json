@@ -1,0 +1,22 @@
+{
+  "name": "chrome-extension-colour-mapper",
+  "version": "0.0.0",
+  "homepage": "https://github.com/squashedfrog/chrome-extension-colour-mapper",
+  "authors": [
+    "Lee Ryan <squashedfrog26@me.com>"
+  ],
+  "description": "Chrome devtools extension to detect the amount of times a colour is applied to an element via a CSS rule.",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "handlebars": "~1.0.0",
+    "jquery": "~2.0.3",
+    "underscore": "~1.5.2"
+  }
+}

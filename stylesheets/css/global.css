@@ -38,8 +38,14 @@ th { text-align: left; }
 #colour-matrix .preview { text-indent: -9999px; }
 #colour-matrix .preview span { border: 1px solid #dddddd; display: block; height: 30px; width: 30px; }
 
-#colour-switcher { overflow: hidden; margin: 0 0 20px 0; padding: 0 0 10px 0; border-bottom: 1px solid #dddddd; }
+#control-panel { overflow: hidden; margin: 0 0 20px 0; padding: 0 0 10px 0; border-bottom: 1px solid #dddddd; }
+#control-panel header { position: relative; }
+#control-panel header span { position: absolute; top: 0; right: 0; }
+#control-panel ul { padding: 0 0 10px 0; }
 
+#colour-switcher, #property-selector { overflow: hidden; margin: 0 0 20px 0; padding: 0 0 10px 0; border-bottom: 1px solid #dddddd; }
+
+#persistance { padding: 0 0 20px 0; }
 #persistance .toggle { border: 1px solid #dddddd; display: inline; padding: 6px 12px; position: relative; border-radius: 4px; }
 #persistance .toggle span { display: inline-block; width: 40px; text-align: center; }
 #persistance .toggle input[type=checkbox] { display: none; }
@@ -53,7 +59,7 @@ h1 { font-size: 36px; }
 
 h2 { font-size: 24px; text-transform: capitalize; }
 
-p, a, label { color: #333333; font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; margin: 0 0 20px 0; font-weight: 200; line-height: 1.4; }
+p, a, label, header span { color: #333333; font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; margin: 0 0 20px 0; font-weight: 200; line-height: 1.4; }
 
 .btn { color: white; background: #428bca; display: inline-block; float: left; padding: 6px 12px; margin: 0 10px 10px 0; font-size: 14px; font-weight: normal; line-height: 1.5; text-align: center; text-decoration: none; border: 1px solid #dddddd; border-radius: 4px; opacity: 0.65; }
 

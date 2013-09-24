@@ -33,10 +33,11 @@ CM.createTables = (function(){
 })();
 
 CM.colourValueSwitcher = (function(){
-	// Need some pub/sub here to listen to changes in the model
+
 	var bindSwitchEvents = function(){
 		
-		var trigger = '#colour-switcher a';
+		var trigger = '#colour-switcher a',
+			matrix = '#property-matrix';
 		
 		$(trigger).on('click', function(){
 			if($(this).hasClass('active')){
@@ -44,9 +45,14 @@ CM.colourValueSwitcher = (function(){
 			} else {
 				$(trigger).removeClass('active');
 				$(this).addClass('active');
+				_.map(colourObj.declerations, function(decleration){
+					decleration.rule = $.rgbHex(decleration.rule);
+				});
+				$(matrix).children().remove();
+				CM.createTables.init();
 				
 			}
-		});
+		})
 		
 	};
 	
@@ -57,7 +63,7 @@ CM.colourValueSwitcher = (function(){
 	};
 })();
 
-CM.persistanceSWitcher = (function(){
+CM.persistanceSwitcher = (function(){
 		
 		var bindPersistanceEvents = function(){
 		
@@ -84,17 +90,3 @@ $(document).ready(function(){
 	CM.persistanceSwitcher.init();
 });
 
-
-
-
-
-/*
-function do_something(msg) {
-    document.body.textContent += '\n' + msg; // Stupid example, PoC
-}
-document.documentElement.onclick = function() {
-    // No need to check for the existence of `respond`, because
-    // the panel can only be clicked when it's visible...
-    respond('Another stupid example!');
-};
-*/

@@ -3,9 +3,10 @@
 	<head>
 		<meta encoding="utf-8" />
 		<link rel="stylesheet" href="../stylesheets/css/global.css" />
-		<script src="../scripts/libs/jquery-2.0.3.min.js"></script>
-		<script src="../scripts/libs/handlebars.js"></script>
-		<script src="../scripts/libs/underscore.js"></script>
+		<script src="../bower_components/jquery/jquery.js"></script>
+		<script src="../bower_components/angular/angular.js"></script>
+		<script src="../bower_components/handlebars/handlebars.js"></script>
+		<script src="../bower_components/underscore/underscore.js"></script>
 		<script src="../scripts/libs/rgbHex.js"></script>
 		<script src="../scripts/panel.js"></script>
 	</head>
@@ -18,24 +19,48 @@
 			<div id="colour-matrix">
 				
 			</div>
-			<div id="colour-switcher">
-				<p>Change the colour reference</p>
-				<ul>
-					<li><a class="btn active" href="#">RGB</a></li>
-					<li><a class="btn" href="#">HEX</a></li>
-				</ul>
-			</div>
-			<div id="persistance">
-				<p>Persist count across journey</p>
-				<form>
-					<div class="toggle">
-						<input type="checkbox" id="persistance-toggle" name="persistance-toggle" value="off" />	
-						<label for="persistance-toggle">
-							<span>on</span>
-							<span class="switch off">/</span>
-							<span>off</span>
-						</label>
-					</div>
+			<div id="control-panel">
+				<header>
+					<h2>Control Panel</h2>
+					<span>close</span>
+				</header>
+				<p>Reload the page to start collecting data with new options:</p>
+				<form action="" id="">
+					<fieldset id="colour-switcher">
+						<p>Change the colour reference</p>
+						<ul>
+							<li><a class="btn active" href="#">RGB</a></li>
+							<li><a class="btn" href="#">HEX</a></li>
+						</ul>
+					</fieldset>
+					<fieldset id="property-selector">
+						<p>Select properties to include</p>
+						<ul>
+							<li>
+								<input type="checkbox" id="color" />
+								<label for="color">color</label>
+							</li>
+							<li>
+								<input type="checkbox" id="background" />
+								<label for="background"> background</label>
+							</li>
+							<li>
+								<input type="checkbox" id="border"/>
+								<label for="border">border</label>
+							</li>
+						</ul>
+					</fieldset>
+					<fieldset id="persistance">
+						<p>Persist count across journey</p>
+						<div class="toggle">
+							<input type="checkbox" id="persistance-toggle" name="persistance-toggle" value="off" />	
+							<label for="persistance-toggle">
+								<span>on</span>
+								<span class="switch off">/</span>
+								<span>off</span>
+							</label>
+						</div>
+					</fieldset>
 				</form>
 			</div>		
 		</div>
@@ -62,4 +87,8 @@
 			{{/each}}
 		</tbody>
 	</table>
+</script>
+
+<script id="control-panel" type="text/x-handlebars-template">
+	<fieldset></fieldset>
 </script>

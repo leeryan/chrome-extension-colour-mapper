@@ -136,14 +136,29 @@ th {
 	}
 }
 
-#colour-switcher{
+#control-panel{
+	@include box-spacing;
+	header{
+		position: relative;
+		span{
+			position: absolute;
+			top: 0;
+			right: 0;
+		}
+	}
+	ul{
+		padding: 0 0 10px 0;
+	}
+}
+
+#colour-switcher,
+#property-selector{
 	@include box-spacing;
 }
 
 #persistance{
-	#persistance-toggle{
-		
-	}
+	
+	padding: 0 0 20px 0;
 	
 	.toggle{
 		border: 1px solid $light-grey;
@@ -197,7 +212,7 @@ h2{
 	text-transform: capitalize;
 }
 
-p, a, label{
+p, a, label, header span{
 	color: $body-copy;
 	font-family: $primary-font-stack;
 	margin: 0 0 20px 0;
