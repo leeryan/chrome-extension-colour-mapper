@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" ng-app>
+<html lang="en" ng-app="colourMapper">
 	<head>
 		<meta encoding="utf-8" />
 		<link rel="stylesheet" href="../stylesheets/css/global.css" />
@@ -10,17 +10,17 @@
 		<script src="../scripts/panel.js"></script>
 	</head>
 	<body>
-		<div id="colour-mapper" ng-controller="ColourMapper">
+		<div id="colour-mapper" ng-controller="mapperCtrl" ng-init="init()">
 			<header>
 				<h1>Colour Mapper</h1>
 			</header>
 			<p>The table indicates how many times a particular colour has been applied to a DOM element in the current tree via CSS.</p>
 			<div id="colour-matrix">
-				<h2>{{colourObj.property}} statistics</h2>
+				<h2>Colour matrix</h2>
 				<table class="table">
 					<thead>
 						<tr>
-							<th>{{colourObj.property}}</th>
+							<th>Colour</th>
 							<th>Preview</th>
 							<th>Count</th>
 						</tr>
@@ -39,30 +39,21 @@
 					<h2>Control Panel</h2>
 					<span>close</span>
 				</header>
-				<p>Reload the page to start collecting data with new options:</p>
 				<form action="" id="">
 					<fieldset id="colour-switcher">
 						<p>Change the colour reference</p>
 						<ul>
 							<li ng-repeat="colourType in colourTypes">
-								<a class="btn" ng-class="{active: colourType == selected}" href="#" ng-click="changeColourValue(colourType)">{{colourType}}</a>
+								<a class="btn" ng-class="{active: colourType == selected}" href="#" ng-click="changeColourValue(colourType)" eat-click >{{colourType}}</a>
 							</li>
 						</ul>
 					</fieldset>
 					<fieldset id="property-selector">
-						<p>Select properties to include</p>
+						<p>Select properties to include on matrix</p>
 						<ul>
-							<li>
-								<input type="checkbox" id="color" />
-								<label for="color">color</label>
-							</li>
-							<li>
-								<input type="checkbox" id="background" />
-								<label for="background"> background</label>
-							</li>
-							<li>
-								<input type="checkbox" id="border"/>
-								<label for="border">border</label>
+							<li ng-repeat="property in properties">
+								<input type="checkbox" id="{{property}}" ng-click="changePropertySet(property)" ng-checked="true" />
+								<label for="{{property}}">{{property}}</label>
 							</li>
 						</ul>
 					</fieldset>
