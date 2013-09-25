@@ -13,15 +13,16 @@ var masterArr = [{
 	]}, {
 	property : 'background',
 	declerations: [
-		{rule: 'rgb(51, 51, 51)', count: 10},
-		{rule: 'rgb(51, 51, 51)', count: 10},
-		{rule: 'rgb(97, 127, 16)', count: 10}
+		{rule: 'rgb(51, 51, 51)', count: 11},
+		{rule: 'rgb(51, 51, 51)', count: 11},
+		{rule: 'rgb(97, 127, 16)', count: 10},
+		{rule: 'rgb(0, 0, 0)', count: 10},
 	]}, {
 	property : 'border',
 	declerations: [
-		{rule: 'rgb(255, 255, 255)', count: 10},
+		{rule: 'rgb(255, 255, 255)', count: 11},
 		{rule: 'rgb(0, 0, 0)', count: 10},
-		{rule: 'rgb(51, 51, 51)', count: 10},
+		{rule: 'rgb(51, 51, 51)', count: 12},
 		{rule: 'rgb(189, 63, 66)', count: 10}
 	]
 }];
@@ -53,38 +54,39 @@ colourMapper.controller('mapperCtrl', ['$scope', function($scope){
 		
 		for(var i = 0; i < masterArr.length; i++){
 			
-			_.map(masterArr[i].declerations, function(decleration){
-				
-				if(_.contains(appPropertyObj.colours, decleration.rule)){
-					console.log('increment');
+			_.each(masterArr[i].declerations, function(masterDecleration){
+				//console.log(masterDecleration);
+				//If the rule is already in the colours array
+				if(_.contains(appPropertyObj.colours, masterDecleration.rule)){
+					//console.log('increment');
+					var colourToIncrement = masterDecleration.rule;
+					
+					//Find the rule in the decleration
+					_.each(appPropertyObj.declerations, function(appDecleration){
+						
+						if(appDecleration.rule === colourToIncrement){
+					
+								
+							appDecleration.count = appDecleration.count + masterDecleration.count;
+							
+							//console.log(appDecleration);
+							
+						}
+						
+					});
+					
+					
 				} else {
-					console.log('add');
-					appPropertyObj.colours.push(decleration.rule);
-					appPropertyObj.declerations.push(decleration);
+					
+					//Pop the value into the colur array
+					appPropertyObj.colours.push(masterDecleration.rule);
+					//Add decleration to master object
+					appPropertyObj.declerations.push(masterDecleration);
 				}
-				
-				
-				
 				
 			});
 			
-			_.each(appPropertyObj.declerations, function(decleration){
-				
-				
-				
-			})
-			
 		}
-		
-		console.log(appPropertyObj);
-		
-		// Find declerations in each array object. 
-		
-		//If the rule doesn;t exist add it.
-		
-		//Else just increment the couter.
-		
-		
 	
 	}
 
