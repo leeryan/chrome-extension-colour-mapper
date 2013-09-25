@@ -55,26 +55,18 @@ colourMapper.controller('mapperCtrl', ['$scope', function($scope){
 		for(var i = 0; i < masterArr.length; i++){
 			
 			_.each(masterArr[i].declerations, function(masterDecleration){
-				//console.log(masterDecleration);
 				//If the rule is already in the colours array
 				if(_.contains(appPropertyObj.colours, masterDecleration.rule)){
-					//console.log('increment');
+					
 					var colourToIncrement = masterDecleration.rule;
 					
-					//Find the rule in the decleration
 					_.each(appPropertyObj.declerations, function(appDecleration){
 						
 						if(appDecleration.rule === colourToIncrement){
-					
-								
 							appDecleration.count = appDecleration.count + masterDecleration.count;
-							
-							//console.log(appDecleration);
-							
 						}
 						
 					});
-					
 					
 				} else {
 					
@@ -89,9 +81,18 @@ colourMapper.controller('mapperCtrl', ['$scope', function($scope){
 		}
 	
 	}
+	
+	
+	
+	//Get a set of declerations from the masterArr.
+	$scope.getPropertySet = function(property){
+		_.each(masterArr, function(value, key, list){
+			if(value.property === property){
+				return value.declerations;
+			}
+		});
+	};
 
-	
-	
 	$scope.changeColourValue = function(element){
 		//Add active class to selected element
 		$scope.selected = element;
@@ -102,8 +103,8 @@ colourMapper.controller('mapperCtrl', ['$scope', function($scope){
 	};
 	
 	$scope.changePropertySet = function(property){
-		console.log('changePropertySet');
-		console.log(property);
+		
+		//if checked remove else call add
 		
 		//Add property set to appPropertyObj
 		function addProperty(property){
@@ -111,10 +112,18 @@ colourMapper.controller('mapperCtrl', ['$scope', function($scope){
 		}
 		
 		//Remove property set to appPropertyObj
-		function removeProperty(property){
+		function removeProperty(){
+			
+			//Grab the declerations from the deselected property in the masterArr.
+			var declerations = $scope.getPropertySet(property);
+			
+			console.log(declerations);
+			
+			//loop through the appPropertyObj declerations.
+			
+			//remove total from the count.
 			
 		}
-		
 		
 	}
 	
