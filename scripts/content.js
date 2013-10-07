@@ -4,7 +4,7 @@ var DOM = window.DOM || {};
 chrome.runtime.onMessage.addListener(function(message, sender){
 	
 	//Send stuff to the background page
-	var styleConfig = DOM.scrapedom.init(message.options);
+	var styleConfig = DOM.scrapedom.init();
 	
 	chrome.runtime.sendMessage(styleConfig);
 	
@@ -12,71 +12,41 @@ chrome.runtime.onMessage.addListener(function(message, sender){
 
 DOM.scrapedom = (function(config){
 	
-	var styleData = [];
+	var rules = ['color', 'background-color', 'border-color'],
+		declarations = {};
 	
-	//Create an object that has all of the values in the config object. 
-	var createStyleModel = function(config){
-		
-		function ruleSet(rule){
-			this.rule = rule;
-			this.declerations = [];
-		};
-
-		_.each(config.rules, function(rule){
-			styleData.push(new ruleSet(rule));
-		});
-		
-		iterateOverDom();
-
-	}
-	
-	//Iterate over the dom grabbing the syles from every element in the page. 
-	//TODO if a type of element already has a matched colour associated with it skip over it so results are not skewed by content
+	//Iterate over the dom grabbing the rule styles from every element in the page.
 	var iterateOverDom = function(){
 	
 		var elements = document.body.getElementsByTagName("*");
 			
 		for(var i = 0; i < elements.length; i++){
 			
-			var currentElement = elements[i],
-				properties = _.each(styleData[i].rule),
-				elementStyles;
+			var currentElement = elements[i];
 				
-			//Get styles specified in styleData for current element
-			stylePairs = $(currentElement).css(properties);
-			
-			console.log(stylePairs);
-			
-			for(var key in stylePairs){
+			_.each(rules, function(rule){
+				var declaration = $(currentElement).css(rule);
 				
-				//If that value doesn't already exist then create it
-				var valueCounter = {},
-					value = stylePairs[key];
-
-				//If a counter for this value does not exist create it
-				if(_.has(styleData[key], value) === false){
-					
-					var counter = 0;
-					
-					valueCounter[value] = counter;
-					_.extend(styleData[key], valueCounter);
-					
-				} else{
-					styleData[key][value] = styleData[key][value] + 1;
-				}
-			}
+				if(_.has(declarations, declaration) === false){
+					declarations[declaration] = 0;
+				} else {
+					declarations[declaration] = declarations[declaration] + 1;
+				};
+				
+			});
+			
 		};
+		
+		console.log(declarations);
 			
 	};
 	
 	return{
-		init: function(config){
+		init: function(){
 			
-			createStyleModel(config);
+			iterateOverDom();
 			
-			//console.log(styleData);
-			
-			return styleData;
+			return declarations;
 			
 		}
 	}
