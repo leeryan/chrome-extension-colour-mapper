@@ -48,15 +48,6 @@
 							</li>
 						</ul>
 					</fieldset>
-					<fieldset id="property-selector">
-						<p>Select properties to include on matrix</p>
-						<ul>
-							<li ng-repeat="property in properties">
-								<input type="checkbox" id="{{property}}" ng-click="changePropertySet(property)" ng-checked="true" />
-								<label for="{{property}}">{{property}}</label>
-							</li>
-						</ul>
-					</fieldset>
 					<fieldset id="persistance">
 						<p>Persist count across journey</p>
 						<div class="toggle">

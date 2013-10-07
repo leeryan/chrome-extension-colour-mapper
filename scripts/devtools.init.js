@@ -29,11 +29,9 @@ var styleDataStub =
 		 "absolute":4}
 	}
 	
-//Post message to the background page
+//Post message to the background page DO I EVEN NEED THIS???
 port.postMessage({
-	"rule01": "font-size",
-	"rule02": "color",
-	"rule03": "position"
+	"rule01": "color"
 });
 
 //Handle response when received

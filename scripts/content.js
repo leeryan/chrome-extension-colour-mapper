@@ -1,7 +1,7 @@
 var DOM = window.DOM || {};
 
-//setup listener to respon to background page upon request
-//TODO put this somewhere moere sensible
+//setup listener to respond to background page upon request
+//TODO put this somewhere more sensible
 chrome.runtime.onMessage.addListener(function(message, sender){
 	//alert("in content script message recieved is " + JSON.stringify(message));
 	
@@ -29,6 +29,7 @@ DOM.scrapedom = (function(config){
 	
 	//Iterate over the dome grabbing the syles from every element in the page. 
 	//TODO if a type of element already has a matched colour associated with it skip over it so results are not skewed by content
+	//TODO has been done on background script KINDA
 	var iterateOverDom = function(){
 	
 		var elements = document.body.getElementsByTagName("*");
@@ -68,6 +69,9 @@ DOM.scrapedom = (function(config){
 		init: function(config){
 			
 			createStyleModel(config);
+			
+			console.log(styleData);
+			
 			return styleData;
 			
 		}

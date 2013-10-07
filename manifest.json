@@ -11,7 +11,7 @@
 	"content_scripts": [
 		{
 			"matches": ["http://*/*", "https://*/*"],
-			"js": ["scripts/libs/underscore.js", "scripts/libs/jquery-2.0.3.min.js", "scripts/content.js"]
+			"js": ["bower_components/underscore/underscore.js", "bower_components/jquery/jquery.js", "scripts/content.js"]
 		}
 	],
 	"permissions":[
