@@ -5,33 +5,12 @@
 //Other extension API's are not available to the developer tools page but they can be onvoked by sending a request to the background page of the extension 
 
 
-var port = chrome.runtime.connect({name: 'devtools'});
-var styleData; 
-var styleDataStub = 
-	{
-	 "font-size":
-		{"14px":124,
-		 "56px":13,
-		 "28px":7,
-		 "32px":2,
-		 "25px":6,
-		 "53px":0,
-		 "50px":0},
-	"color":
-		{"rgb(51, 51, 51)":47,
-		 "rgb(255, 255, 255)":70,
-		 "rgb(59, 59, 59)":0,
-		 "rgb(90, 90, 90)":38},
-	"position":
-		{"static":134,
-		 "relative":11,
-		 "fixed":6,
-		 "absolute":4}
-	}
-	
-//Post message to the background page DO I EVEN NEED THIS???
+var port = chrome.runtime.connect({name: 'devtools'}),
+	styleData; 
+
+//Post message to the background page
 port.postMessage({
-	"rule01": "color"
+	rules: ["color"]
 });
 
 //Handle response when received

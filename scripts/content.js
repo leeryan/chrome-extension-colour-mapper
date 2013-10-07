@@ -1,35 +1,37 @@
 var DOM = window.DOM || {};
 
 //setup listener to respond to background page upon request
-//TODO put this somewhere more sensible
 chrome.runtime.onMessage.addListener(function(message, sender){
-	//alert("in content script message recieved is " + JSON.stringify(message));
 	
 	//Send stuff to the background page
 	var styleConfig = DOM.scrapedom.init(message.options);
 	
 	chrome.runtime.sendMessage(styleConfig);
+	
 });
 
 DOM.scrapedom = (function(config){
 	
-	var styleData = {};
+	var styleData = [];
 	
 	//Create an object that has all of the values in the config object. 
 	var createStyleModel = function(config){
 		
-		for(var rule in config){
-			var styleRule = config[rule];
-			styleData[styleRule] = {};
-		}
+		function ruleSet(rule){
+			this.rule = rule;
+			this.declerations = [];
+		};
+
+		_.each(config.rules, function(rule){
+			styleData.push(new ruleSet(rule));
+		});
 		
 		iterateOverDom();
 
 	}
 	
-	//Iterate over the dome grabbing the syles from every element in the page. 
+	//Iterate over the dom grabbing the syles from every element in the page. 
 	//TODO if a type of element already has a matched colour associated with it skip over it so results are not skewed by content
-	//TODO has been done on background script KINDA
 	var iterateOverDom = function(){
 	
 		var elements = document.body.getElementsByTagName("*");
@@ -37,11 +39,13 @@ DOM.scrapedom = (function(config){
 		for(var i = 0; i < elements.length; i++){
 			
 			var currentElement = elements[i],
-				properties = _.keys(styleData),
+				properties = _.each(styleData[i].rule),
 				elementStyles;
 				
 			//Get styles specified in styleData for current element
 			stylePairs = $(currentElement).css(properties);
+			
+			console.log(stylePairs);
 			
 			for(var key in stylePairs){
 				
@@ -70,7 +74,7 @@ DOM.scrapedom = (function(config){
 			
 			createStyleModel(config);
 			
-			console.log(styleData);
+			//console.log(styleData);
 			
 			return styleData;
 			
